@@ -1,0 +1,19 @@
+<h1>Welcome to my workouts!</h1>
+
+<% for(i = 0; i < workouts.length; i++) { %>
+  <div>
+    <h1><%= workouts[i].name %></h1>
+    
+   <%# update form %>
+    <form action="/api/workouts/update/<%= workouts[i].id %>" method="GET">
+			<input type="text" name="name" id="name" placeholder="<%= workouts[i].name %>">      
+			<button type="submit">Update</button>
+    </form>
+
+    <%# delete button %>
+    <form action="/api/workouts/delete/<%= workouts[i].id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit">Delete</button>
+    </form>
+  </div>
+<% } %>
