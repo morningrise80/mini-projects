@@ -1,3 +1,3 @@
-# mini-project4
+# mini-project5
 
- The startServer function uses async/await to handle the asynchronous server setup.
+JSX, Functional and class component, as well handling props and state have been added.
